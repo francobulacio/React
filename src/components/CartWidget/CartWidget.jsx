@@ -1,10 +1,10 @@
 import React from 'react'
-import Cart from './Assest/Cart.svg'
+import favicon2 from './Assest/favicon2.png'
 
 const CartWidget = () => {
   return (
     <div>
-        <img src={Cart} alt="carrito de compras" />
+        <img src={favicon2} alt="carrito de compras" />
         0
     </div>
   )
