@@ -1,0 +1,10 @@
+.contenedorItem {
+    text-align: center;
+    border: 1px solid gainsboro;
+    margin: 3rem;
+
+}
+
+.imgDetail{
+    width: 30vw;
+}

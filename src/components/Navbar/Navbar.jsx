@@ -1,27 +1,28 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">El irlandés</a>
+                <a className="navbar-brand" href="#"><NavLink to={"/"}>El irlandés</NavLink></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Whisky</a>
+                            <a className="nav-link active" aria-current="page" href="#"><NavLink to={`/categoria/1`}>Whisky</NavLink></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Vinos y Espumantes</a>
+                            <a className="nav-link" href="#"><NavLink to= {`/categoria/2`}>Vinos y Espumantes</NavLink></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Gin y Vodka</a>
+                            <a className="nav-link" href="#"><NavLink to={`/categoria/3`}>Gin y Vodka</NavLink></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled">Otras bebidas</a>
+                            <a className="nav-link disabled"><NavLink to={`/categoria/4`}>Otras bebidas</NavLink> </a>
                         </li>
                     </ul>
                 </div>

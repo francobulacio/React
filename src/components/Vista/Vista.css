@@ -1,0 +1,13 @@
+.claro{
+    background-color: white;
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.oscuro{
+    background-color: black;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+}

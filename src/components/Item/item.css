@@ -1,0 +1,26 @@
+body{
+    background-color: gainsboro;
+}
+.cardProducto {
+    background-color: white;
+    border-radius: 10px;
+    width: 15rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgProducto{
+    width: 150px;
+    object-fit: contain;
+}
+
+.btnProducto{
+    background-color:brown;
+    font-size: 1.2rem;
+    width: 8rem;
+    border-radius: 10px;
+    border: none
+}
