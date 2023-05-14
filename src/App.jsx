@@ -19,6 +19,7 @@ function App() {
           <Route path="/categoria/:idcat" element= {<ItemListContainer2/>}  />
           <Route path="/item/:idItem" element= {<ItemDetailContainer/>}/>
           <Route/>
+          
 
       </Routes>
 
@@ -39,3 +40,5 @@ export default App;
 //  <Contador inicial = {1} stock = {10} />
 //  <ItemListContainer2/>
 //  <ItemDetailContainer/>
+
+//entrega fianl del tp
