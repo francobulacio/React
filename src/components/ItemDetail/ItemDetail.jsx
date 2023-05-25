@@ -1,16 +1,17 @@
+import Contador from '../Contador/Contador'
 import './ItemDetail.css'
 
-const ItemDetail = ({id, nombre, precio, img}) => {
+const ItemDetail = ({producto}) => {
 
-
+  console.log(producto)
 
   return (
     <div className='contenedorItem'>
-        <h2>Nombre: {nombre}</h2>
-        <h3>Precio: {precio}</h3>
-        <img className='imgDetail' src={img} alt={nombre} />
+        <h2>Nombre: {producto.nombre}</h2>
+        <h3>Precio: {producto.precio}</h3>
+        <img className='imgDetail' src={producto.img} alt={producto.nombre} />
 
-
+        <Contador producto={producto} inicial={1} stock={10}/>
 
     </div>
   )

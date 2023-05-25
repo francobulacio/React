@@ -4,8 +4,13 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebaseConfig"
+import { useCart } from "../../Context/CartContextProvider"
 
 const ItemDetailContainer = () => {
+
+
+    const {cart } = useCart()
+    console.log(cart)
     const [ producto, setProducto] = useState (null)
 
     const {idItem} = useParams()
@@ -14,7 +19,7 @@ const ItemDetailContainer = () => {
         getDoc(nuevoDocumento)
           .then((res) => {
             const data = res.data()
-            const nuevoProducto = {id: data.id,...data}
+            const nuevoProducto = {id: res.id,...data}
             setProducto(nuevoProducto)
           })
     }, [idItem])
@@ -26,7 +31,10 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        <ItemDetail {...producto}/>
+      {
+        producto && <ItemDetail producto={producto}/>
+      }
+        
 
     </div>
   )

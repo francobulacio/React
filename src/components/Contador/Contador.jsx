@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useCart } from '../../Context/CartContextProvider';
 
-const Contador = ({stock, inicial}) => {
+const Contador = ({stock, inicial, producto}) => {
     const [contador, setContador] = useState(inicial);
     
 
@@ -21,15 +22,16 @@ const Contador = ({stock, inicial}) => {
         setContador (contador - 1)
         }
     }
-
+    const {handleBuyProduct} = useCart()
   return (
+
     <>
     <button onClick={incrementar}>+</button>
     <p> {contador} </p>
     <button onClick={decrementar}>-</button>
     <br />
     <br />
-    <button>Agregar al carrito</button>
+    <button onClick={() => handleBuyProduct(producto, contador)}>Agregar al carrito</button>
     </>
   )
 }
