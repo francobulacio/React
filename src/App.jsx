@@ -4,8 +4,9 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer2 from './components/ItemListContainer2/ItemListContainer2';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useCart } from './Context/CartContextProvider';
+
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 
 function App() {
@@ -13,18 +14,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
+    
       <Navbar  />
         <Routes>
           <Route path="/" element={<ItemListContainer2/>}/>
           <Route path="/categoria/:idcat" element= {<ItemListContainer2/>}  />
           <Route path="/item/:idItem" element= {<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>} />
-          <Route/>
-          
-
+          <Route path="*" element={<h2>Sitio en Construcción</h2>} />
+          <Route path='/checkout' element={<Checkout/>} />
+      
       </Routes>
 
-
+  
 
       
       </BrowserRouter>
